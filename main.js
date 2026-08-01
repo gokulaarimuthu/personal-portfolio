@@ -13,3 +13,20 @@ function scrolltoTopfunction(){document.body.scrollTop=0;document.documentElemen
 document.addEventListener("contextmenu",function(e){if(e.target.nodeName==="IMG"){e.preventDefault()}},!1);let Pupils=document.getElementsByClassName('footer-pupil');let pupilsArr=Array.from(Pupils);let pupilStartPoint=-10;let pupilRangeX=20;let pupilRangeY=15;let mouseXStartPoint=0;let mouseXEndPoint=window.innerWidth;let currentXPosition=0;let fracXValue=0;let mouseYEndPoint=window.innerHeight;let currentYPosition=0;let fracYValue=0;let mouseXRange=mouseXEndPoint-mouseXStartPoint;const mouseMove=(event)=>{currentXPosition=event.clientX-mouseXStartPoint;fracXValue=currentXPosition/mouseXRange;currentYPosition=event.clientY;fracYValue=currentYPosition/mouseYEndPoint;let pupilXCurrrentPosition=pupilStartPoint+(fracXValue*pupilRangeX);let pupilYCurrrentPosition=pupilStartPoint+(fracYValue*pupilRangeY);pupilsArr.forEach((curPupil)=>{curPupil.style.transform=`translate(${pupilXCurrrentPosition}px, ${pupilYCurrrentPosition}px)`})}
 const windowResize=(event)=>{mouseXEndPoint=window.innerWidth;mouseYEndPoint=window.innerHeight;mouseXRange=mouseXEndPoint-mouseXStartPoint}
 window.addEventListener('mousemove',mouseMove);window.addEventListener('resize',windowResize)
+
+const cardTiltTargets = document.querySelectorAll('.project-box');
+cardTiltTargets.forEach(card => {
+  card.style.transformStyle = 'preserve-3d';
+  card.style.transition = 'transform 0.25s ease, box-shadow 0.25s ease';
+  card.addEventListener('pointermove', event => {
+    const rect = card.getBoundingClientRect();
+    const xPercent = (event.clientX - rect.left) / rect.width - 0.5;
+    const yPercent = (event.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `perspective(1000px) rotateX(${yPercent * -12}deg) rotateY(${xPercent * 12}deg) translateZ(0)`;
+    card.style.boxShadow = `${xPercent * 20}px ${yPercent * 20}px 60px rgba(34, 211, 238, 0.18)`;
+  });
+  card.addEventListener('pointerleave', () => {
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+    card.style.boxShadow = '0 26px 60px rgba(1, 5, 20, 0.24)';
+  });
+});
