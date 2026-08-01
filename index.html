@@ -43,6 +43,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- stylesheet -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="modern-portfolio.css" />
   <!-- google fonts-->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
@@ -52,6 +53,7 @@
     <source src="src/mp3/preloader.mp3" type="audio/mp3" />
   </audio>
   <div id="preloader"></div>
+  
   <noscript>Allow Javascript</noscript>
 
   <header>
@@ -76,6 +78,12 @@
           <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
             <a href="#about" aria-label="about menu button">
               &#60;/AboutMe&#62;
+            </a>
+          </li>
+
+          <li class="career" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="400">
+            <a href="#career" aria-label="career menu button">
+              &#60;/Career&#62;
             </a>
           </li>
 
@@ -125,6 +133,11 @@
         <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
           <a href="#about" tabindex="0" aria-label="about menu button">
             &#60;/AboutMe&#62;
+          </a>
+        </li>
+        <li id="career-mobile-tab" class="mobile-navbar-tabs-li career" onclick="hidemenubyli()">
+          <a href="#career" tabindex="0" aria-label="career menu button">
+            &#60;/Career&#62;
           </a>
         </li>
         <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
@@ -362,6 +375,44 @@
     </section>
     <!-- about section ends  -->
 
+    <!-- Career section starts -->
+    <section class="career-section-container" id="career">
+      <div class="projects-section-div">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="Career">
+            &#60;/Career&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+
+        <div class="project-boxes-div">
+          <div class="project-box-wrapper" data-aos="fade-up">
+            <div class="project-box single-column">
+              <div class="info-div">
+                <div>
+                  <article class="ProjectHeading">DOA at NielsenIQ (March 2025 - Present)</article>
+                  <article class="ProjectHeading">Organization Achievements</article>
+                  <p class="ProjectDescription">Developed an AI tool named "SCAN-X" for the team and the business impacts are:</p>
+                  <ul class="ProjectDescription">
+                      <li>Improved process efficiency by 92% via automation.</li>
+                      <li>Saved 35 manual hours per month through streamlined workflows.</li>
+                      <li>Reduced FTE effort by 28% and boosted productivity.</li>
+                      <li>Delivered about $15,000 in annual cost savings.</li>
+                      <li>Awarded Thumbs Up & Global Operations Awards.</li>
+                      <li>Recognized with an Exceeds Performance rating.</li>
+                  </ul>
+                </div>
+                <div class="project-buttons">
+                  <!-- placeholder for actions if needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Career section ends -->
+
     <section class="skills-section-container" id="skills">
       <div class="skills-section">
         <div class="section-heading" data-aos="fade-up">
@@ -374,7 +425,7 @@
         <div class="frontend-dev-section">
           <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
             aria-label="As a frontend a developer these are the skills i have">
-            Tech Stack
+            Stack
           </h3>
           <ul class="tech-stack-wrapper">
             <li class="tech-stack-box" data-aos="fade-up">
@@ -467,6 +518,7 @@
                   <a href="https://github.com/gokulaarimuthu/airline-website" target="_blank" class="github-redirect"
                     aria-label="Visit Pexelicons on GitHub">
                     <img src="src/svg/github.svg" alt="github redirect button" />
+                    <span class="tooltip">GitHub</span>
                   </a>
                  
                 </div>
@@ -492,6 +544,7 @@
                 	<a href="https://github.com/gokulaarimuthu/doctor-appointment-website-php" target="_blank" class="github-redirect"
                     aria-label="Visit Pexelicons on GitHub">
                     <img src="src/svg/github.svg" alt="github redirect button" />
+                    <span class="tooltip">GitHub</span>
                   </a>
                  
                 </div>
@@ -516,6 +569,7 @@
                   <a href="https://github.com/gokulaarimuthu/cake-shop" target="_blank" class="github-redirect"
                     aria-label="Visit cake bakery on github">
                     <img src="src/svg/github.svg" alt="github redirect button" />
+                    <span class="tooltip">GitHub</span>
                   </a>
                  
                 </div>
@@ -538,7 +592,8 @@
                 <div class="project-buttons">
                   <a href="https://github.com/gokulaarimuthu/Airline-Application" target="_blank" class="github-redirect"
                     aria-label="Visit Netflix clone on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
+                      <img src="src/svg/github.svg" alt="github redirect button" />
+                      <span class="tooltip">GitHub</span>
                   </a>
                 
                 </div>
@@ -562,7 +617,8 @@
                  <div class="project-buttons">
                   <a href="https://github.com/gokulaarimuthu/soft-tissue-sarcoma-ViT" target="_blank" class="github-redirect"
                     aria-label="Visit Netflix clone on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
+                      <img src="src/svg/github.svg" alt="github redirect button" />
+                      <span class="tooltip">GitHub</span>
                   </a>
                  
                 </div>
@@ -588,7 +644,8 @@
                 <div class="project-buttons">
                 	<a href="https://github.com/gokulaarimuthu/fake-instagram-profile-detect" target="_blank" class="github-redirect"
                     aria-label="Visit Pexelicons on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
+                      <img src="src/svg/github.svg" alt="github redirect button" />
+                      <span class="tooltip">GitHub</span>
                   </a>
                  
                 </div>
@@ -617,7 +674,8 @@
                 <div class="project-buttons">
                 	<a href="https://github.com/gokulaarimuthu/fake-image-detection-mobilenet" target="_blank" class="github-redirect"
                     aria-label="Visit Pexelicons on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
+                      <img src="src/svg/github.svg" alt="github redirect button" />
+                      <span class="tooltip">GitHub</span>
                   </a>
                  
                 </div>
